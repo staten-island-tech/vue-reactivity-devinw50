@@ -12,22 +12,22 @@
 import DestCard from "@/components/DestCard.vue";
 const destinations = [
   {
-    name: "KD 15 Aunt Pearl",
+    name: "KD 15 B.A.D",
     International: true,
     price: 1300,
-    img: "https://images.unsplash.com/photo-1498307833015-e7b400441eb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80&quot;",
+    img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20221229/106eca26736945d2a1db9d5321865a7c.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
-    name: "KD 16 Aunt Pearl",
+    name: "Jordan 4 Seafoam",
     International: true,
     price: 800,
-    img: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1476&q=80&quot;",
+    img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20230528/ff23aa7eff334ec5902dc0e588403f67.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
     name: "GT Cut 2 Easter",
     International: true,
     price: 1200,
-    img: "https://images.unsplash.com/photo-1547138494-97041dec734b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80&quot;",
+    img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20230526/b372e4cb6eea4ca1b7fe7952a107797a.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
     name: "Dame 8 Sakura",
@@ -36,52 +36,52 @@ const destinations = [
     img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1173&q=80&quot;",
   },
   {
-    name: "Harden 7 Bliss Pink",
+    name: "Kyrie Low 5 Nets",
     International: false,
     price: 400,
-    img: "https://images.unsplash.com/photo-1511497584788-876760111969?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80&quot;",
+    img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20220722/33c57b0750e345dfa57fdd6f1324f320.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
     name: "Kyrie 5 Mom White",
     International: true,
     price: 800,
-    img: "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80&quot;",
+    img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20220212/d422bde2860f43e3bb456bdb572461a1.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
     name: " GT Cut 1 Think Pink",
     International: true,
     price: 800,
-    img: "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80&quot;",
+    img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20230526/4fedd830400f48c1be8cc2618647e1b6.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
     name: "Kyrie Low 4 Kay Yow",
     International: true,
     price: 800,
-    img: "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80&quot;",
+    img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20230211/538ded8aa8d34f4f84f7b6f1aec8835a.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
-    name: "Ja 1 Chinese New Year",
+    name: "Jordan 4 Off-White Sail",
     International: true,
     price: 800,
-    img: "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80&quot;",
+    img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20230528/d10ce095c253415890a8a4835eb26213.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
     name: "PG 6 Painted Swoosh",
     International: true,
     price: 800,
-    img: "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80&quot;",
+    img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20220815/9c0c56eda35d455d91730b242842d086.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
-    name: "Kyrie Low 5 Orchid",
+    name: "KD 14 Aquafresh",
     International: true,
     price: 800,
-    img: "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80&quot;",
+    img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20220212/f026358b6bb1407d8ec453b37ceb3f9e.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
     name: "Kobe 6 Protro Mambacita",
     International: true,
     price: 800,
-    img: "https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80&quot;",
+    img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20220428/8e6f51bea872465aac88b03ca5f182c0.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
 ];
 </script>
