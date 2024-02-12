@@ -30,10 +30,10 @@ const destinations = [
     img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20230526/b372e4cb6eea4ca1b7fe7952a107797a.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
-    name: "Dame 8 Sakura",
+    name: "Jordan 1 Reverse Mocha",
     International: false,
     price: 900,
-    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1173&q=80&quot;",
+    img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20230528/373224f4eb5e47fea4f38e1c15bffd00.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
     name: "Kyrie Low 5 Nets",
@@ -44,7 +44,7 @@ const destinations = [
   {
     name: "Kyrie 5 Mom White",
     International: true,
-    price: 800,
+    price: 600,
     img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20220212/d422bde2860f43e3bb456bdb572461a1.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
