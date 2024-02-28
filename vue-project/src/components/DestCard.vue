@@ -3,7 +3,7 @@
     <h2>{{ Destination.name }}</h2>
     <img :src="Destination.img" alt="" />
     <h3>{{ clicked }}</h3>
-    <button @click="increment">Add to Cart</button>
+    <button id="addbtn" @click="increment">Add to Cart</button>
   </div>
 </template>
 
@@ -13,17 +13,15 @@ const props = defineProps({
   Destination: Object,
 });
 
-//clicker logic
-let clicked = ref(0);
-function increment() {
-  clicked.value++;
-}
 </script>
 
 <style scoped>
 img {
-  width: 250px;
-  height: 300px;
+  width: 240px;
+  height: 240px;
   object-fit: cover;
+  border: 5px;
+  border-radius: 5%;
 }
+
 </style>
