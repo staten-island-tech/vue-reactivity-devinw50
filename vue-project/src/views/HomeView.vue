@@ -143,9 +143,9 @@ const totalPrice = computed(() => {
 }
 
 .cart-item-image {
-  width: 30px; /* Set width of mini image */
-  height: 30px; /* Set height of mini image */
-  margin-right: 10px; /* Add margin between image and item name */
+  width: 30px; 
+  height: 30px; 
+  margin-right: 10px;
 }
 
 </style>
