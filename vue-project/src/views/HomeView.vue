@@ -1,15 +1,27 @@
 <template>
-  <div>
-    <div class="row" v-for="(row, index) in Math.ceil(destinations.length / 3)" :key="index">
-      <div class="column" v-for="(destination, columnIndex) in destinations.slice(index * 3, (index + 1) * 3)" :key="columnIndex">
-        <DestCard :Destination="destination" />
-      </div>
+  <div class="dest-cards">
+    <DestCard
+      v-for="destination in destinations"
+      :key="destination.name"
+      :destination="destination"
+      :addToCart="addToCart"
+    />
+    <div class="cart">
+      <h2>Cart</h2>
+      <ul>
+        <li v-for="(item, index) in cart" :key="index">
+          {{ item.name }} - ${{ item.price }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
+
 <script setup>
 import DestCard from "@/components/DestCard.vue";
+import { ref } from 'vue';
+
 const destinations = [
   {
     name: "Jordan 4 Black Canvas",
@@ -29,6 +41,7 @@ const destinations = [
     price: 400,
     img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20220410/08ca77cb56bc4bad81896ab3533d62df.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
+  // Add other destinations here
   {
     name: "Jordan 4 Royalty",
     International: false,
@@ -74,7 +87,7 @@ const destinations = [
   {
     name: "Jordan 4 White Cement",
     International: true,
-    price: 550  ,
+    price: 550,
     img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20220212/7097715027bc42bf8c87112ad44ffdce.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
   {
@@ -84,13 +97,37 @@ const destinations = [
     img: "https://cdn-img.poizonapp.com/pro-img/cut-img/20220212/61b34cd57533456ea8468575b1e0123e.jpg?x-oss-process=image/format,webp/resize,w_800",
   },
 ];
+
+const cart = ref([]);
+
+const addToCart = (item) => {
+  console.log("Adding to cart:", item);
+  cart.value.push(item);
+};
 </script>
-.row {
-  display: flex;
-  justify-content: center;
+
+<style scoped>
+.dest-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  justify-content: flex-start; /* Align to the left */
+  gap: 20px; /* Add gap between cards */
 }
 
-.column {
-  margin: 0 10px;
+.cart {
+  margin-left: auto; /* Move the cart to the right */
 }
-<style scoped></style>
+
+.cart h2 {
+  margin-bottom: 10px;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  margin-bottom: 5px;
+}
+</style>
