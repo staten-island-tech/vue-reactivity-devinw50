@@ -1,10 +1,10 @@
 <template>
   <div>
-    <DestCard
-      v-for="destination in destinations"
-      :key="destination.name"
-      :Destination="destination"
-    />
+    <div class="row" v-for="(row, index) in Math.ceil(destinations.length / 3)" :key="index">
+      <div class="column" v-for="(destination, columnIndex) in destinations.slice(index * 3, (index + 1) * 3)" :key="columnIndex">
+        <DestCard :Destination="destination" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -85,5 +85,12 @@ const destinations = [
   },
 ];
 </script>
+.row {
+  display: flex;
+  justify-content: center;
+}
 
+.column {
+  margin: 0 10px;
+}
 <style scoped></style>
