@@ -10,17 +10,20 @@
       <h2>Cart</h2>
       <ul>
         <li v-for="(item, index) in cart" :key="index">
+          <img class="cart-item-image" :src="item.img" :alt="item.name"> <!-- Add mini image -->
           {{ item.name }} - ${{ item.price }}
+          <button @click="removeFromCart(index)">Remove</button>
         </li>
       </ul>
+      <p>Total: ${{ totalPrice }}</p>
     </div>
   </div>
 </template>
 
-
 <script setup>
 import DestCard from "@/components/DestCard.vue";
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+
 
 const destinations = [
   {
@@ -101,21 +104,29 @@ const destinations = [
 const cart = ref([]);
 
 const addToCart = (item) => {
-  console.log("Adding to cart:", item);
   cart.value.push(item);
 };
+
+const removeFromCart = (index) => {
+  cart.value.splice(index, 1);
+};
+
+// Compute total price
+const totalPrice = computed(() => {
+  return cart.value.reduce((total, item) => total + item.price, 0);
+});
 </script>
 
 <style scoped>
 .dest-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns */
-  justify-content: flex-start; /* Align to the left */
-  gap: 20px; /* Add gap between cards */
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: flex-start;
+  gap: 20px;
 }
 
 .cart {
-  margin-left: auto; /* Move the cart to the right */
+  margin-left: auto;
 }
 
 .cart h2 {
@@ -130,4 +141,11 @@ const addToCart = (item) => {
 .cart li {
   margin-bottom: 5px;
 }
+
+.cart-item-image {
+  width: 30px; /* Set width of mini image */
+  height: 30px; /* Set height of mini image */
+  margin-right: 10px; /* Add margin between image and item name */
+}
+
 </style>

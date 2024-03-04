@@ -8,16 +8,16 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
+import { defineProps } from 'vue';
 
 const props = defineProps({
-  destination: Object
+  destination: Object,
+  addToCart: Function  // Ensure addToCart is defined as a prop
 });
 
-const emits = defineEmits(['addToCart']);
-
 function addToCart() {
-  emits('addToCart', destination); // Emit the event with destination as argument
+  // Call the addToCart method passed from the parent component
+  props.addToCart(props.destination);
 }
 </script>
 
